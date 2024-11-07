@@ -198,18 +198,12 @@ a:hover,
 }
 
 .btn:hover {
-    background-color: #444;
     background: linear-gradient(90deg, #FF99CC 0%, #FF69B4 100%);
 }
 
 .project-card:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px var(--accent-color);
-}
-
-.project-card:hover .card-content {
-    color: #444;
-    transition: color 0.2s ease-in-out
 }
 
 .project-card[status="completed"] {
