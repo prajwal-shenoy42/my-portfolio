@@ -1,0 +1,313 @@
+/* Font Family */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #121212;
+}
+
+/* Monospace Font */
+code {
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+
+*:before,
+*:after,
+* {
+    box-sizing: border-box;
+}
+
+#about h1 {
+    font-size: 2rem;
+}
+
+#about p {
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+h1,
+h2 {
+    color: #66CCCC;
+}
+
+p {
+    color: #B3B3B3;
+}
+
+a,
+.btn {
+    color: #FFFFFF;
+    /* White accents */
+    text-decoration: none;
+}
+
+a:hover,
+.btn:hover {
+    color: #448AFF;
+    /* Soft blue hover effect */
+}
+
+/* About Section */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #1A1A1A;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60ch;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.profile-picture {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.about-text {
+    text-align: center;
+}
+
+.about-text h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.about-text p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #666;
+    padding: 0 2rem;
+    text-align: justify;
+}
+
+
+/* Projects Section */
+
+#projects {
+    padding: 4rem 2rem;
+    background-color: #151515;
+}
+
+.description {
+    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 8rem;
+    padding-left: 0;
+}
+
+.projects-container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.card-content {
+    padding: 2rem;
+    position: relative;
+    padding-bottom: 6rem;
+    transition: color 0.2s ease-in-out;
+    color: #FFC67D;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    height: 4rem;
+    display: flex;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    text-decoration: none;
+    background-color: #FFC67D;
+    color: #808080;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover .card-content {
+    color: #444;
+    transition: color 0.2s ease-in-out
+}
+
+.project-card[status="completed"] {
+    border: 4px solid #228B22;
+}
+
+.project-card[status="ongoing"] {
+    border: 4px solid #8B0A1A;
+}
+
+.project-card[status="completed"]:after {
+    content: "Completed";
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: #228B22;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.project-card[status="ongoing"]:after {
+    content: "Ongoing";
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: #8B0A1A;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Contact Section */
+
+#contact {
+    padding: 4rem 2rem;
+    background-color: #1A1A1A;
+}
+
+.contact-container {
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contact-container h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container li {
+    margin-bottom: 0;
+    margin-right: 2rem;
+}
+
+.contact-container li:last-child {
+    margin-right: 0;
+}
+
+.contact-container img,
+.contact-container i {
+    font-size: 2rem;
+    width: 2rem;
+    margin-right: 0.5rem;
+}
+
+.contact-container a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-container a:hover {
+    color: #444;
+}
+
+.contact-container form {
+    margin-top: 2rem;
+}
+
+@media (min-width: 481px) {
+
+    #about {
+        padding: 4rem 2rem;
+    }
+
+    #about h1 {
+        font-size: 3rem;
+    }
+
+    #about p {
+        font-size: 1.5rem;
+    }
+
+    .profile-picture {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    #contact {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .project-card img {
+        height: 15rem;
+    }
+}
