@@ -1,7 +1,14 @@
+:root {
+    --primary-background: #87CEEB;
+    --secondary-color: #ADD8E6;
+    --accent-color: #3498DB;
+    --background-color: #121212;
+}
+
 /* Font Family */
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #121212;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--primary-background);
 }
 
 /* Monospace Font */
@@ -16,7 +23,7 @@ code {
 }
 
 #about h1 {
-    font-size: 2rem;
+    font-size: 3.5rem;
 }
 
 #about p {
@@ -27,16 +34,27 @@ code {
 
 h1,
 h2 {
-    color: #66CCCC;
+    font-family: 'Raleway', sans-serif;
+    color: var(--accent-color);
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2rem;
 }
 
 p {
-    color: #B3B3B3;
+    color: #666;
 }
 
 a,
 .btn {
-    color: #FFFFFF;
+    color: var(--accent-color);
     /* White accents */
     text-decoration: none;
 }
@@ -44,8 +62,14 @@ a,
 a:hover,
 .btn:hover {
     color: #448AFF;
+    text-shadow: 0 0 10px var(--accent-color);
     /* Soft blue hover effect */
 }
+
+.highlight {
+    color: #03A9F4; /* Electric Blue */
+    text-shadow: 0 0 5px #03A9F4; /* Soft glow effect */
+  }
 
 /* About Section */
 
@@ -54,7 +78,8 @@ a:hover,
     flex-direction: column;
     align-items: center;
     padding: 4rem 2rem;
-    background-color: #1A1A1A;
+    background-color: var(--secondary-background);
+    margin-top: 10rem;
 }
 
 .about-container {
@@ -75,6 +100,7 @@ a:hover,
 
 .about-text {
     text-align: center;
+    font-size: 2.5rem;
 }
 
 .about-text h1 {
@@ -97,7 +123,7 @@ a:hover,
 
 #projects {
     padding: 4rem 2rem;
-    background-color: #151515;
+    background-color: var(--primary-background);
 }
 
 .description {
@@ -161,22 +187,24 @@ a:hover,
     left: 2rem;
     text-decoration: none;
     background-color: #FFC67D;
-    color: #808080;
+    color: #121212;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
     font-size: 1rem;
     font-weight: bold;
+    background: linear-gradient(90deg, #FF69B4 0%, #FF99CC 100%);
 }
 
 .btn:hover {
     background-color: #444;
+    background: linear-gradient(90deg, #FF99CC 0%, #FF69B4 100%);
 }
 
 .project-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px var(--accent-color);
 }
 
 .project-card:hover .card-content {
@@ -185,11 +213,11 @@ a:hover,
 }
 
 .project-card[status="completed"] {
-    border: 4px solid #228B22;
+    border: 4px solid #32CD32;
 }
 
 .project-card[status="ongoing"] {
-    border: 4px solid #8B0A1A;
+    border: 4px solid #FFA07A;
 }
 
 .project-card[status="completed"]:after {
@@ -216,7 +244,11 @@ a:hover,
 
 #contact {
     padding: 4rem 2rem;
-    background-color: #1A1A1A;
+    background-color: var(--secondary-background);
+}
+
+#contact p {
+    font-weight: bold;
 }
 
 .contact-container {
@@ -225,6 +257,7 @@ a:hover,
     text-align: center;
     padding: 2rem 1rem;
     text-align: center;
+    font-size: 2.5rem;
 }
 
 .contact-container h1 {
@@ -310,4 +343,34 @@ a:hover,
     .project-card img {
         height: 15rem;
     }
+}
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+/* Slide-in animation */
+.slide-in {
+    transform: translateY(20px);
+    transition: transform 1s ease-in-out;
+}
+
+.slide-in.visible {
+    transform: translateY(0);
+}
+
+/* Scale-up animation */
+.scale-up {
+    transform: scale(0.8);
+    transition: transform 1s ease-in-out;
+}
+
+.scale-up.visible {
+    transform: scale(1);
 }
